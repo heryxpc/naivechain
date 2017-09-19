@@ -1,5 +1,7 @@
 # Naivechain - a blockchain implementation in 200 lines of code
 
+### Modified to support an example of Proof of Work: calculate prime numbers and hash them.
+
 ### Motivation
 All the current implementations of blockchains are tightly coupled with the larger context and problems they (e.g. Bitcoin or Ethereum) are trying to solve. This makes understanding blockchains a necessarily harder task, than it must be. Especially source-code-wisely. This project is an attempt to provide as concise and simple implementation of a blockchain as possible.
 

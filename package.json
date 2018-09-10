@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node main.js"
+    "deploy1": "gcloud app deploy node1.yaml",
+    "deploy2": "gcloud app deploy node2.yaml",
+    "start": "node main.js",
+    "lint": "samples lint",
+    "pretest": "npm run lint",
+    "system-test": "samples test app",
+    "test": "npm run system-test",
+    "e2e-test": "samples test deploy"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

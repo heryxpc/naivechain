@@ -14,4 +14,11 @@
 # [START app_yaml]
 runtime: nodejs
 env: flex
+manual_scaling:
+  instances: 1
+network:
+  forwarded_ports:
+    - 6001/tcp
+env_variables:
+  P2P_PORT: 6001
 # [END app_yaml]

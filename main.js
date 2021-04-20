@@ -225,7 +225,8 @@ var replaceChain = (newBlocks) => {
 };
 
 var isValidChain = (blockchainToValidate) => {
-    if (JSON.stringify(blockchainToValidate[0]) !== JSON.stringify(getGenesisBlock())) {
+    if (blockchainToValidate[0].previousHash !== blockchain[0].previousHash || blockchainToValidate[0].hash !== blockchain[0].hash) {
+        console.log("Genesis blocks do not match with peers!");
         return false;
     }
     var tempBlocks = [blockchainToValidate[0]];
@@ -233,6 +234,7 @@ var isValidChain = (blockchainToValidate) => {
         if (isValidNewBlock(blockchainToValidate[i], tempBlocks[i - 1])) {
             tempBlocks.push(blockchainToValidate[i]);
         } else {
+            console.log(`Block with index:${i} hash:${blockchainToValidate[i].hash} and prime:${blockchainToValidate[i].prime} is invalid!`);
             return false;
         }
     }

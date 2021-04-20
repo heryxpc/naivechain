@@ -1,4 +1,4 @@
-# Naiveprime - Code based on: https://github.com/lhartikk/naivechain - a blockchain implementation in 200 lines of code.
+# Naivechainprime - Code based on: https://github.com/lhartikk/naivechain - a blockchain implementation in 200 lines of code.
 Main difference is that this case uses prime numbers to validate new blocks.
 
 ### Modified to support an example of Proof of Work: calculate prime numbers and hash them.
